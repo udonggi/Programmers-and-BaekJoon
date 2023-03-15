@@ -2,7 +2,7 @@ package com.ll.Lv0.P120829;
 
 public class Main {
     public static void main(String[] args){
-
+        System.out.println(new Solution());
     }
 }
 
