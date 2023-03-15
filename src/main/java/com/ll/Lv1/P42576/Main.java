@@ -14,7 +14,35 @@ public class Main {
 }
 
 
-class Solution {
+class Solution{
+    public String solution(String[] participant, String[] completion) {
+        String answer ="";
+        Map<String, Integer> p = new HashMap<>();
+        for (String per : participant) {
+            if(p.containsKey(per)){
+                p.replace(per, p.get(per)+1);
+                continue;
+            }
+            p.put(per, 1);
+        }
+
+        for(String per : completion){
+            if(p.containsKey(per)){
+                p.replace(per, p.get(per)-1);
+            }
+        }
+
+        for(String key : p.keySet()){
+            if(p.get(key) != 0){
+                answer = key;
+                break;
+            }
+        }
+        return answer;
+    }
+}
+
+class Solution2 {
     public String solution(String[] participant, String[] completion) {
         Arrays.sort(participant);
         Arrays.sort(completion);
@@ -27,7 +55,8 @@ class Solution {
     }
 }
 
-    class Solution2 {
+
+class Solution3 {
         public String solution(String[] participant, String[] completion) {
             Map<Integer, String> p = new HashMap<>();
             Map<Integer, String> copy = new HashMap<>();
@@ -54,7 +83,9 @@ class Solution {
             while (iter.hasNext()) answer = iter.next();
             return answer;
         }
-    }
+}
+
+
 
 
 
