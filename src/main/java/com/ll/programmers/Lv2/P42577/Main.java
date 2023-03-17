@@ -1,4 +1,4 @@
-package com.ll.Lv2.P42577;
+package com.ll.programmers.Lv2.P42577;
 
 import java.util.*;
 

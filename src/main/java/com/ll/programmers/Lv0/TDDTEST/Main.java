@@ -1,6 +1,4 @@
-package com.ll.Lv0.TDDTEST;
-
-import java.util.StringTokenizer;
+package com.ll.programmers.Lv0.TDDTEST;
 
 public class Main {
     public static void main(String[] args){

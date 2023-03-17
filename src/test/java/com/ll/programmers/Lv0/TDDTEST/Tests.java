@@ -1,6 +1,7 @@
-package com.ll.Lv0.TDDTEST;
+package com.ll.programmers.Lv0.TDDTEST;
 
 
+import com.ll.programmers.Lv0.TDDTEST.Polynomial;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;

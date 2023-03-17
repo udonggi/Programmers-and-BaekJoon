@@ -1,7 +1,6 @@
-package com.ll.Lv1.P42576;
+package com.ll.programmers.Lv1.P42576;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args){

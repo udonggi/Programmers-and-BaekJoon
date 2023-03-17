@@ -1,4 +1,4 @@
-package com.ll.Lv1.P1845;
+package com.ll.programmers.Lv1.P1845;
 
 import java.util.HashMap;
 import java.util.Map;
