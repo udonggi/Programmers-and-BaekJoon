@@ -17,16 +17,16 @@ public class Main {
 
 class Solution1 {
     public List<Integer> solution(int []arr) {
-         Queue<Integer> list = new LinkedList<>();
+         Queue<Integer> list = new LinkedList<>(); //큐에 arr 저장
          List<Integer> newList = new ArrayList<>();
          for(int i : arr){
              list.add(i);
          }
-         newList.add(list.poll());
+         newList.add(list.poll()); //일단 하나 빼서 저장
 
          int j = 0;
          for(int i = 1; i < arr.length; i++){
-             if(!newList.get(j).equals(list.remove())){
+             if(!newList.get(j).equals(list.remove())){ //다음거랑 다르면 리스트에 넣기, 같으면 안 넣고 넘어가기
                  newList.add(arr[i]);
                  j++;
              }
