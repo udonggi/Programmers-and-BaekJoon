@@ -65,14 +65,14 @@ class Solution2 {
 class Solution3 {
     public int[] solution(int []arr) {
         Queue<Integer> list = new LinkedList<>();
-        list.add(arr[0]);
+        list.add(arr[0]); //처음 숫자는 일단 넣기 (상관없으니)
         for(int i = 1; i < arr.length; i++){
-            if(arr[i-1] != arr[i]){
+            if(arr[i-1] != arr[i]){  //앞에 숫자와 현재 숫자가 다르면 넣기, 같으면 그냥 넘어가면 된다.
                 list.add(arr[i]);
             }
         }
         int[] answer = new int[list.size()];
-        for(int i = 0 ; i < answer.length; i++){
+        for(int i = 0 ; i < answer.length; i++){ //큐에 있는거 배열에 넣기
             answer[i] = list.remove();
         }
         return answer;
