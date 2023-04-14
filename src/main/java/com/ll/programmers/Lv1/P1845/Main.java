@@ -19,6 +19,7 @@ class Solution {
         for(int i : nums){
             if(po.containsKey(i)){
                 po.replace(i, po.get(i)+1);
+                continue;
             }
             po.put(i, 1);
         }
