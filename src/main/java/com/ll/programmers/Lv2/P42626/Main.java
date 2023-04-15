@@ -3,7 +3,7 @@ package com.ll.programmers.Lv2.P42626;
 import java.util.PriorityQueue;
 
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         int[] scoville = new int[]{1, 2, 3};
         int K = 11;
         System.out.println(new Solution().solution(scoville, K));
@@ -15,7 +15,7 @@ class Solution {
     public int solution(int[] scoville, int K) {
         int answer = 0;
         PriorityQueue<Integer> pq = new PriorityQueue<>();
-        for(int i : scoville){ //우선순위큐에다 다 넣기
+        for (int i : scoville) { //우선순위큐에다 다 넣기
             pq.add(i);
         }
         while (true) {

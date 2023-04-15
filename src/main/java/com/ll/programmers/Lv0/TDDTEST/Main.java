@@ -1,42 +1,39 @@
 package com.ll.programmers.Lv0.TDDTEST;
 
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         System.out.println(new Polynomial("3 + 3").calc());
     }
 }
 
 class Polynomial {
     String numbers;
-    Polynomial(String numbers){
+
+    Polynomial(String numbers) {
         this.numbers = numbers;
     }
 
-    public int calc(){
+    public int calc() {
         int result = 0;
         numbers = numbers.replaceAll(" ", "");
 
-        for(int i = 0 ; i < numbers.length(); i ++){
-            if(Character.isDigit(numbers.charAt(i))){
-                if(Character.isDigit(numbers.charAt(i+1))){
+        for (int i = 0; i < numbers.length(); i++) {
+            if (Character.isDigit(numbers.charAt(i))) {
+                if (Character.isDigit(numbers.charAt(i + 1))) {
                     int a = numbers.charAt(i) - '0';
-                    int b = numbers.charAt(i+1) - '0';
+                    int b = numbers.charAt(i + 1) - '0';
                     result = 10 * a + b;
-                }
-                else{
+                } else {
                     result = numbers.charAt(i) - '0';
                 }
-            }
-            else{
-                result += numbers.charAt(i+1) - '0';
+            } else {
+                result += numbers.charAt(i + 1) - '0';
                 break;
             }
         }
         return result;
     }
 }
-
-
 
 
 //public class Calculator {

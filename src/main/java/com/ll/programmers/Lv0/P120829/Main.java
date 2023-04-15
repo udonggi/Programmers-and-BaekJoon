@@ -1,7 +1,7 @@
 package com.ll.programmers.Lv0.P120829;
 
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         System.out.println(new Solution());
     }
 }
@@ -9,16 +9,13 @@ public class Main {
 class Solution {
     public int solution(int angle) {
         int answer = 0;
-        if(0< angle && angle < 90){
+        if (0 < angle && angle < 90) {
             answer = 1;
-        }
-        else if (angle == 90){
+        } else if (angle == 90) {
             answer = 2;
-        }
-        else if (90 < angle && angle <180){
+        } else if (90 < angle && angle < 180) {
             answer = 3;
-        }
-        else if (angle == 180){
+        } else if (angle == 180) {
             answer = 4;
         }
         return answer;

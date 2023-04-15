@@ -1,22 +1,19 @@
 package com.ll.test;
 
 
-import java.lang.reflect.Array;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
-import java.util.Scanner;
-import java.util.stream.Collectors;
-
-class Main{
-    public static void main(String[] args){
+class Main {
+    public static void main(String[] args) {
         Map<String, String> 사람1 = new HashMap<>();
         사람1.put("이름", "홍길동");
-        사람1.put("나이","22");
+        사람1.put("나이", "22");
         사람1.put("키", "170.5");
         Map<String, String> 사람2 = new HashMap<>();
         사람2.put("이름", "홍길순");
         사람2.put("나이", "25");
-        사람2.put("키","162.4");
+        사람2.put("키", "162.4");
         System.out.println(사람1);
         System.out.println(사람2);
     }

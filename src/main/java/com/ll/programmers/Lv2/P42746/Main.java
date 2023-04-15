@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 public class Main {
-    public static void main(String[] args){
-        int[] numbers = new int[] {1, 10, 100, 1000, 818, 81, 898, 89, 0, 0};
+    public static void main(String[] args) {
+        int[] numbers = new int[]{1, 10, 100, 1000, 818, 81, 898, 89, 0, 0};
 
         System.out.println(new Solution2().solution(numbers));
     }
@@ -33,6 +33,7 @@ class Solution { //11번 테스트 케이스 실패 [0,0,0] 일 경우 0으로 �
         return answer;
     }
 }
+
 class Solution2 {
     public String solution(int[] numbers) {
         String answer = "";

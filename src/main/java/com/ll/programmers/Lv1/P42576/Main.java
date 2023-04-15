@@ -1,9 +1,12 @@
 package com.ll.programmers.Lv1.P42576;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         String[] p = new String[]{"mislav", "stanko", "mislav", "ana"};
         String[] s = new String[]{"stanko", "ana", "mislav"};
 
@@ -13,26 +16,26 @@ public class Main {
 }
 
 
-class Solution{
+class Solution {
     public String solution(String[] participant, String[] completion) {
-        String answer ="";
+        String answer = "";
         Map<String, Integer> p = new HashMap<>();
         for (String per : participant) {
-            if(p.containsKey(per)){
-                p.replace(per, p.get(per)+1);
+            if (p.containsKey(per)) {
+                p.replace(per, p.get(per) + 1);
                 continue;
             }
             p.put(per, 1);
         }
 
-        for(String per : completion){
-            if(p.containsKey(per)){
-                p.replace(per, p.get(per)-1);
+        for (String per : completion) {
+            if (p.containsKey(per)) {
+                p.replace(per, p.get(per) - 1);
             }
         }
 
-        for(String key : p.keySet()){
-            if(p.get(key) != 0){
+        for (String key : p.keySet()) {
+            if (p.get(key) != 0) {
                 answer = key;
                 break;
             }
@@ -56,36 +59,33 @@ class Solution2 {
 
 
 class Solution3 {
-        public String solution(String[] participant, String[] completion) {
-            Map<Integer, String> p = new HashMap<>();
-            Map<Integer, String> copy = new HashMap<>();
-            String answer = "";
-            int person = 1;
-            for (String per : participant) {
-                p.put(person, per);
-                copy.put(person, per);
-                person++;
-            }
-            for (int i = 1; i < p.size() + 1; i++) {
-                for (int j = 0; j < completion.length; j++) {
-                    if (p.get(i).equals(completion[j])) {
-                        copy.remove(i);
-                        completion[j] = "";
-                        break;
-                    }
-                    if (j == completion.length - 1) {
-                        return p.get(i);
-                    }
+    public String solution(String[] participant, String[] completion) {
+        Map<Integer, String> p = new HashMap<>();
+        Map<Integer, String> copy = new HashMap<>();
+        String answer = "";
+        int person = 1;
+        for (String per : participant) {
+            p.put(person, per);
+            copy.put(person, per);
+            person++;
+        }
+        for (int i = 1; i < p.size() + 1; i++) {
+            for (int j = 0; j < completion.length; j++) {
+                if (p.get(i).equals(completion[j])) {
+                    copy.remove(i);
+                    completion[j] = "";
+                    break;
+                }
+                if (j == completion.length - 1) {
+                    return p.get(i);
                 }
             }
-            Iterator<String> iter = copy.values().iterator();
-            while (iter.hasNext()) answer = iter.next();
-            return answer;
         }
+        Iterator<String> iter = copy.values().iterator();
+        while (iter.hasNext()) answer = iter.next();
+        return answer;
+    }
 }
-
-
-
 
 
 //      List<String> a = Arrays.stream(participant).filter(e -> !e.contains(completion[0])).filter(e->!e.contains(completion[1])).toList();
