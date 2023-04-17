@@ -9,4 +9,8 @@ class Solution {
         String[] answer = {};
         return answer;
     }
+
+    public int[] intersection(int[] ints, int[] ints1) {
+        return null ;
+    }
 }
