@@ -7,7 +7,7 @@ public class Main {
         int n = 5;
         int[] lost = new int[]{2,3,4};
         int[] reserve = new int[]{1,2,3};
-
+        Arrays.binarySearch(lost, 3);
         System.out.println(new Solution().solution(n,lost, reserve));
 
     }
