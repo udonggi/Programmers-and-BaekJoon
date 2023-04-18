@@ -13,7 +13,7 @@ public class Tests {
                         new int[]{2, -1, 0}
                 )
         ).isEqualTo(
-                new long[]{0, 0}
+                new int[]{0, 0}
         );
     }
 

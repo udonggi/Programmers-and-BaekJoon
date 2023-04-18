@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ll.programmers.Lv2.P87377.Tests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-04-18T01:49:22" hostname="yudong-giui-MacBookAir.local" time="0.017">
+  <properties/>
+  <testcase name="교점, [[1, -1, 0], [2, -1, 0]]" classname="com.ll.programmers.Lv2.P87377.Tests" time="0.017"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
