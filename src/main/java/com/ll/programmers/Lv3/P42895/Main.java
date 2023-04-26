@@ -28,13 +28,15 @@ class Solution {
         list.get(1).add(N); // 맨 처음은 자기 자신 N=5라 치면 5 하나
 
         for (int i = 2; i < 9; i++) {
-            int num = calc(list.get(i), list.get(i-1), N, number);
-
             int repeat = Integer.parseInt(String.valueOf(N).repeat(i));
             list.get(i).add(repeat); //55, 555같은거 넣기
 
-            if (num == 1 || repeat == number) {
-                return i;
+            for (int j = 1; j < i; j++) {
+                int num = calc(list.get(i), list.get(j), list.get(i - j), number); //3번째면 (1,2) (2,1) 4번째는 (1,3) (3,1) (2,2)
+
+                if (num == 1 || repeat == number) {
+                    return i;
+                }
             }
 
         }
@@ -42,19 +44,22 @@ class Solution {
 
     }
 
-    public int calc(Set<Integer> newSet, Set<Integer> preSet, int N, int number) {
-        int divide = -1;
-        for (int pre : preSet) {
-            newSet.add(pre + N);
-            newSet.add(pre - N);
-            newSet.add(pre * N);
-            if (N != 0) {
-                newSet.add(pre / N);
-                divide = pre / N;
-            }
+    public int calc(Set<Integer> newSet, Set<Integer> set1, Set<Integer> set2, int number) {
+        int divide = 0;
+        for (int i : set1) {
+            for (int j : set2) {
+                newSet.add(i + j);
+                newSet.add(i - j);
+                newSet.add(i * j);
 
-            if (pre + N == number || pre - N == number || pre * N == number || divide == number) { //답일 경우
-                return 1;
+                if (i != 0 && j != 0) {
+                    newSet.add(i / j);
+                    divide = i / j;
+                }
+
+                if (i + j == number || i - j == number || i * j == number || divide == number) {
+                    return 1;
+                }
             }
         }
         return 0;
