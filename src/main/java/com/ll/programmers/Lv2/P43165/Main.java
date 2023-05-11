@@ -19,8 +19,8 @@ class Solution {
     public int solution(int[] numbers, int target) {
         int answer = 0;
         List<Integer> list = new ArrayList<>();
-        list.add(-numbers[0]); //맨 처음 숫자 음수로
-        list.add(numbers[0]); // 맨 처음 숫자 양수로
+        list.add(-numbers[0]); //맨 처음 숫자 음수로 -4
+        list.add(numbers[0]); // 맨 처음 숫자 양수로  4
         for (int i = 1; i < numbers.length; i++) {
             List<Integer> temp = new ArrayList<>(); // 임시 리스트 생성
             for (int j = 0; j < list.size(); j++) {
