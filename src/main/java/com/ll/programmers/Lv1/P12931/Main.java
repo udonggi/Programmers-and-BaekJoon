@@ -1,5 +1,9 @@
 package com.ll.programmers.Lv1.P12931;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class Main {
 public static void main(String[] args) {
         int n = 123;
@@ -17,6 +21,9 @@ class Solution {
             if(n < 10) break;
             n = n / 10;
         }
+
+        List<Integer> list = new ArrayList<>();
+        list.stream().filter(i -> i == 1).collect(Collectors.toList());
 
         return answer;
     }
