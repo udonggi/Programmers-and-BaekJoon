@@ -11,6 +11,7 @@ public class Main {
         int answer = 0;
 
         Stack<Integer> stack = new Stack<>();
+        StringBuilder sb = new StringBuilder();
 
         for (int i = 0; i < N; i++) {
             String cmd = sc.nextLine();
@@ -22,30 +23,32 @@ public class Main {
 
             if (cmd.equals("pop")) { //pop
                 if (stack.empty()) {
-                    System.out.println("-1");
+                    sb.append(-1 + "\n");
                 } else {
-                    System.out.println(stack.pop());
+                    sb.append(stack.pop() + "\n");
                 }
             }
 
-            if (cmd.equals("size")) System.out.println(stack.size());
+            if (cmd.equals("size")) sb.append(stack.size() + "\n");
 
             if (cmd.equals("empty")) {
                 if (stack.empty()) {
-                    System.out.println("1");
+                    sb.append(1 + "\n");
                 } else {
-                    System.out.println("0");
+                    sb.append(0 + "\n");
                 }
             }
 
             if (cmd.equals("top")) {
                 if (stack.empty()) {
-                    System.out.println("-1");
+                    sb.append(-1 + "\n");
                 } else {
-                    System.out.println(stack.peek());
+                    sb.append(stack.peek() + "\n");
                 }
             }
         }
+
+        System.out.print(sb);
 
     }
 }
