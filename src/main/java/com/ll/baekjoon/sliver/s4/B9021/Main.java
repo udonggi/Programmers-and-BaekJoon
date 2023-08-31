@@ -67,7 +67,6 @@ public class Main { //stack으로 풀기
 
             char c = s.charAt(i);
 
-            // 여는 괄호일 경우 스택에 넣는다.
             if (c == '(') {
                 stack.push(c);
             } else if (stack.empty()) {
