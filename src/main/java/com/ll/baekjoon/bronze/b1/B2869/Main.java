@@ -12,17 +12,12 @@ public class Main {
         int B = Integer.parseInt(st.nextToken());
         int V = Integer.parseInt(st.nextToken());
 
-        int end = 0;
-        int count = 0;
+        int count = (V - B) / (A - B);
 
-        while (true) {
-            count ++;
-            end += A;
-            if (end >= V) {
-                break;
-            }
-            end -= B;
+        if ((V - B) % (A - B) > 0) {
+            count++;
         }
+
 
         System.out.println(count);
     }
