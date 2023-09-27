@@ -33,12 +33,13 @@ public class Main {
             }
 
             if (index > list.size() - 1) {
+                //index가 범위 넘어가면 list 크기만큼 빼줘야함
                 while (index > list.size()-1) {
                     index -= list.size();
                 }
                 sb.append(list.get(index)).append(", ");
                 list.remove(index);
-                index--;
+                index--; // -- 하는 이유는 지우고나면 list 크기도 줄어들고 index 번호도 달라지기 때문이다.
             } else {
                 sb.append(list.get(index)).append(", ");
                 list.remove(index);
