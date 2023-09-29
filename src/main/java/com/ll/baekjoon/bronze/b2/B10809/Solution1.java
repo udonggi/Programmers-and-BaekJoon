@@ -3,7 +3,7 @@ package com.ll.baekjoon.bronze.b2.B10809;
 import java.util.*;
 import java.io.*;
 
-public class Main {
+public class Solution1 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
