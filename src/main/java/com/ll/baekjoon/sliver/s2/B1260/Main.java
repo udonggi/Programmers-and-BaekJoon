@@ -31,6 +31,11 @@ public class Main {
             adjList[node2].add(node1);
         }
 
+        //간선 순서대로 정렬
+        for (int i = 1; i <= N; i++) {
+            Collections.sort(adjList[i]);
+        }
+
         visited = new boolean[N + 1];
 
         dfs(V);
@@ -77,3 +82,4 @@ public class Main {
     }
 
 }
+
