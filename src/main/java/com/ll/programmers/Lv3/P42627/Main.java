@@ -18,14 +18,11 @@ class Solution {
         //Arrays.sort(jobs, (a1, a2) -> a1[0] - a2[0]);
         Arrays.sort(jobs, Comparator.comparingInt(a -> a[0]));
 
-        PriorityQueue<int[]> pq = new PriorityQueue<>(new Comparator<int[]>() {
-            @Override
-            public int compare(int[] o1, int[] o2) {
-                if (o1[1] == o2[1]) {
-                    return o1[0] - o2[0];
-                }
-                return o1[1] - o2[1];
+        PriorityQueue<int[]> pq = new PriorityQueue<>((o1, o2) -> {
+            if (o1[1] == o2[1]) {
+                return o1[0] - o2[0];
             }
+            return o1[1] - o2[1];
         });
 
         int i = 0;
@@ -78,14 +75,11 @@ class Solution2 {
             }
         });
 
-        PriorityQueue<int[]> pq = new PriorityQueue<>(new Comparator<int[]>() {
-            @Override
-            public int compare(int[] o1, int[] o2) {
-                if (o1[1] == o2[1]) {
-                    return o1[0] - o2[0];
-                }
-                return o1[1] - o2[1];
+        PriorityQueue<int[]> pq = new PriorityQueue<>((o1, o2) -> {
+            if (o1[1] == o2[1]) {
+                return o1[0] - o2[0];
             }
+            return o1[1] - o2[1];
         });
 
         int i = 1;
