@@ -11,6 +11,7 @@ public class Main {
 }
 
 class Solution {
+    // 문제 번호 12924
     public int solution(int n) {
         int answer = 0;
         for(int i = 1; i <= n; i++){
