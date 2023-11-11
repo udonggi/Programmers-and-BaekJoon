@@ -5,9 +5,30 @@ import java.io.*;
 public class Main {
     public static void main(String[] args) {
         int n = 78;
-        System.out.println(new Solution2().solution(n));
+        System.out.println(new Solution().solution(n));
     }
 }
+
+class Solution {
+    public int solution(int n) {
+        String s = Integer.toBinaryString(n);
+        int count = s.replace("0", "").length();
+
+        int num = Integer.parseInt(s, 2);
+
+        while (true) {
+            num++;
+            String b = Integer.toBinaryString(num);
+            int b_count = b.replace("0", "").length();
+            if (count == b_count) {
+                break;
+            }
+        }
+
+        return num;
+    }
+}
+
 
 class Solution2 {
     public int solution(int n) {
