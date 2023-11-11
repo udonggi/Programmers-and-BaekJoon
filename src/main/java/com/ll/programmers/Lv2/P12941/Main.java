@@ -1,4 +1,4 @@
-package com.ll.programmers.Lv2.B12941;
+package com.ll.programmers.Lv2.P12941;
 
 import java.util.*;
 import java.io.*;
