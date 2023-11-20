@@ -6,9 +6,9 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int S = Integer.parseInt(br.readLine());
-        int num = 0;
-        int count = 0;
+        long S = Long.parseLong(br.readLine());
+        long num = 0;
+        long count = 0;
         for (int i = 1; ; i++) {
             if (num > S) {
                 break;
